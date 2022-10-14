@@ -57,8 +57,63 @@ function greet(){
 
 button.addEventListener("click", greet);
 */
-
+/*
 const name = "Front";
 const number = 242;
 console.log(`${name} ${number}`);
 
+if (hour < 18) {
+    greeting = "Good Day";
+}
+
+if (1 || 0) {
+    alert ('Truthy!'); 
+}
+*/
+
+/*number = Number(prompt("Enter a Number"));
+
+function numberChecker() {
+    if(number === 6) {
+        return true;
+} else {
+    return false;
+}
+}
+
+console.log(numberChecker);
+
+*/
+
+console.log("hello from Javascript"); // this is how you make an inline comment
+
+
+var sum = 10+10;
+
+console.log(sum);
+
+var a = 3;
+var b = 17;
+var c = 12;
+
+a = a + 12;
+a += 12; //this is another way to write out the formula above
+b = 9 + b;
+b += 9 //this is another way to write out the formula above
+c = c + 7;
+c += 7 //this is another way to write out the formula above 
+
+var myName = "Sal";
+var myStr = "My name is " + myName + " and I am well!"; //constructing strings with variables
+
+console.log(myStr);
+
+myNameLength = myName.length;
+
+console.log(myNameLength); //finding the length of a string
+
+firstLetterOfFirstName = myName[0];
+console.log(firstLetterOfFirstName); //finding the first letter of a string
+
+lastLetterOfFirstName = myName[myName.length - 1]; //finding the last letter of a string even if you don't know how many characters are in the string/name
+console.log(lastLetterOfFirstName);
