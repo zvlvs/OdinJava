@@ -117,3 +117,194 @@ console.log(firstLetterOfFirstName); //finding the first letter of a string
 
 lastLetterOfFirstName = myName[myName.length - 1]; //finding the last letter of a string even if you don't know how many characters are in the string/name
 console.log(lastLetterOfFirstName);
+
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = "";
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb;
+    return result;
+
+}
+
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+console.log(wordBlanks("bike", "slow", "flew", "slowly"));
+
+//arrays
+/*var ourArray = ["John", 23];
+
+var myArray = ["Sal", 1];
+*/
+/*
+var ourArray = [["the universe", 42], ["everything", 101010]];
+
+var myArray = [["Bulls", 23]. ["White Sox", 45]];
+*/
+
+/*var ourArray = [18,64,19];
+ourArray[1] = 45; //ourArray would now equal 18,45,19 due to the [1] replacing the 64 in the array line to 45
+
+console.log(ourArray);
+*/
+
+var myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3]);
+
+/*var removedFromMyArray = myArray.pop();
+
+console.log(myArray);*/
+
+var removedFromMyArray = myArray.shift(); //.shift removes the first array
+
+//.unshift adds an element to the beginning of the array
+
+//nested array
+
+var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 12]]; //this creates an array of arrays
+
+//functions let you reuse code. The code below for "Hey World" will come up in the console log anytime that the reusableFunction is used.
+function reusableFunction() {
+    console.log("Hey World!");
+}
+
+reusableFunction();
+
+//passing data using arguments. a,b can be substituted for any variable
+function functionWithArgs(a, b){
+    console.log(a + b);
+}
+functionWithArgs(10, 5);
+
+//global scope means that the code is visible anywhere in the code
+
+//local variables are within a function whereas as global variables are independent and can be visible by your code anywhere
+function myLocalScope() {
+    var myVar = 5;
+    console.log(myVar);
+}
+myLocalScope();
+
+//return a value from a function
+function minusSeven(num) {
+    return num - 7;
+}
+
+console.log(minusSeven(10));
+
+function timesFive(num) {
+    return num * 5;
+}
+
+console.log(timesFive(10));
+
+//understanding undefinied value returned from a Function
+
+var sum = 0;
+function addThree(){
+    sum = sum + 3;
+}
+
+function addFive() {
+    sum += 5
+} //if you don't add a return function to your code then it will return as an "undefined" in the console log
+
+//assignment with a return value
+
+var changed = 0;
+
+function change(num) {
+    return (num + 5) / 3;
+}
+
+changed = change(10);
+
+console.log(changed);
+
+//stand in line
+
+function nextInLine(arr, item) {
+    arr.push(item);
+    return arr.shift();
+}
+
+var testArr = [1, 2, 3 ,4, 5];
+
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+//boolean value
+
+function welcomeToBooleans() {
+    return false; //you can use true or false
+}
+
+//if statements help make decisions in code
+
+function ourTrueOrFalse(isItTrue) {
+    if (isItTrue) {
+        return "Yes, it's true";
+    }
+    return "No, it's false";
+}
+
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return "Yes, that was true";
+   }
+   return "No, that was false";
+}
+console.log(trueOrFalse(true));
+
+//comparison with equality operators
+
+function testEqual(val) {
+    if (val == 12) {
+        return "Equal";  
+    }
+    return "Not Equal";
+}
+
+console.log(testEqual(10));
+
+// == is the symbol to check for equality but it attempts to convert the type i.e string to var and so on whereas === is the strict operator and this does not convert and only check to see if the items are equal in the way that they are written. 
+
+function testStrict(val) {
+    if (val === 7) {
+        return "Equal";  
+    }
+    return "Not Equal";
+}
+
+console.log(testStrict(7));
+
+
+function testNotEqual(val) {
+    if (val != 99) {
+        return "Not Equal";  
+    }
+    return "Equal";
+}
+
+console.log(testNotEqual(7));
+
+function testStrictNotEqual(val) {
+    if (val !== 99) { //!== strict not equal is !==
+        return "Not Equal";  
+    }
+    return "Equal";
+} 
+
+console.log(testStrictNotEqual(7));
+
+//comparisons with the logical and operator
+
+function testGreaterThan(val) {
+    if (val > 100) {
+        return "Over 100";
+    }
+    if (val > 10) {
+        return "Over 10";
+    }
+    return "10 or under";
+}
+
+console.log(testGreaterThan(10));
