@@ -599,3 +599,94 @@ function cc(card) {
 
 cc(2); cc("K"); cc(10); cc("K"); cc("A");
 console.log(cc(4));
+
+//build javascript objects
+
+var ourDog = {
+    "name": "Camper",
+    "legs": "4",
+    "tails": "1",
+    "friends": ["everything"],
+};
+
+var myDog = {
+    "name": "Quincy",
+    "legs": "3",
+    "tails": "2",
+    "friends": [],
+};
+
+//dot notation
+
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats",
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+
+//accesing object properties with bracket notation
+// anytime an onject has a space you have to use bracket notation
+var testObject = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water",
+};
+
+var entreeValue = testObject["an entree"];
+var drinkValue = testObject["the drink"];
+
+var testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas",
+};
+
+var playerNumber = 16;
+var player = testObj[playerNumber];
+
+//updating object property
+var ourDog = {
+    "name": "Camper",
+    "legs": "4",
+    "tails": "1",
+    "friends": ["everything"],
+};
+
+ourDog.name = "Happy Camper" //this changes the name from Camper to Happy Camper
+
+//Adding New Properties to Objects
+//this can be done with either dot notation or bracket notation
+
+var myDog = {
+    "name": "Quincy",
+    "legs": "3",
+    "tails": "2",
+    "friends": [],
+};
+
+myDog.bark = "bow wow"
+
+var ourDog = {
+    "name": "Camper",
+    "legs": "4",
+    "tails": "1",
+    "friends": ["everything"],
+};
+
+ourDog['bark'] = "woof!"
+
+//delete properties from an object
+
+var ourDog = {
+    "name": "Camper",
+    "legs": "4",
+    "tails": "1",
+    "friends": ["everything"],
+    "bark": "woof!",
+};
+
+delete ourDog.bark;
+
