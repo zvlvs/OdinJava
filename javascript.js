@@ -690,22 +690,261 @@ var ourDog = {
 
 delete ourDog.bark;
 
+<<<<<<< HEAD
 //object lookup
 function phoneticLookup(val) {
     var result = "";
 
+=======
+var myDog = {
+    "name": "Happy Coder",
+    "legs": "4",
+    "tails": "1",
+    "friends": ["freedomCamp Campers"],
+    "bark": "woof"
+};
+
+delete myDog.tails;
+
+//object for lookup
+
+function phoneticLookup(val){
+    var result = "";
+
+
+>>>>>>> 207acdc05a665bb9ec6cf7b6c4cfe8d5a77e6220
     var lookup = {
         "alpha": "Adams",
         "bravo": "Boston",
         "charlie": "Chicago",
         "delta": "Denver",
         "echo": "Easy",
+<<<<<<< HEAD
         "forxtrot": "Frank",
     }
+=======
+        "foxtrot": "Frank",
+    };
+>>>>>>> 207acdc05a665bb9ec6cf7b6c4cfe8d5a77e6220
 
     result = lookup[val];
 
     return result;
 }
 
+<<<<<<< HEAD
 console.log(phoneticLookup("charlie"));
+=======
+console.log(phoneticLookup("charlie"));
+
+//testing objects for properties
+
+var myObj = {
+    gift: "pony",
+    pet: "kitten",
+    bed: "sleigh",
+};
+
+function checkObj(checkProp) {
+    if (myObj.hasOwnProperty(checkProp)){
+        return myObj[checkProp];
+    } else {
+        return "Not Found";
+    }
+}
+
+console.log(checkObj("gift"));
+
+// manipulating complex objects
+
+var myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": "1973",
+        "formats": [
+            "cd",
+            "8T",
+            "LP",
+        ],
+        "gold": true,
+    },
+
+    {
+        "artist": "Beau Carnes",
+        "title": "Cereal Man",
+        "release_year": "2003",
+        "formats": [
+            "Youtube Video",
+        ],
+    }
+]
+
+//accessing nested objects
+
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs",
+        },
+        "outside": {
+            "trunk": "jack",
+        }
+    }
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+
+console.log(gloveBoxContents);
+
+//nested arrays
+
+var myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion",
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch",
+        ]
+    },
+]
+
+var secondTree = myPlants[1].list[1];
+
+console.log(secondTree);
+
+//record collection
+
+var collection = {
+    "2548": {
+        "album": "Slippery When Wet",
+        "artist": "Bon Jovi",
+        "tracks": [
+            "Let It Rock",
+            "You Give Love A Bad Name",
+        ]
+    },
+    "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": [
+            "1999",
+            "Little Red Corvette",
+        ]
+    },
+    "1245": {
+        "artist": "Robert Palmer",
+        "tracks": []
+    },
+    "5439": {
+        "album": "ABBA Gold",
+    },
+};
+
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+function updateRecords(id, prop, value) {
+    if (value === "") {
+        delete collection[id][prop];
+    } else if (prop === "tracks") {
+      //if the tracks property is empty
+      collection[id][prop] = collection[id][prop] || []; //if collection exists, it'll equal itself. If it doesn't it will create an empty array
+      collection[id][prop].push(value); //push pushes in the value that was entered into the end of the array 
+    } else {
+        collection[id][prop] = value;
+    }
+
+    return collection;
+}
+updateRecords(2468, "tracks", "test");
+console.log(updateRecords(5439, "artist", "ABBA"));
+
+//iterate with While Loops
+
+var myArray = [];
+
+var i = 0;
+while(i < 5) {
+    myArray.push(i);
+    i++;
+}
+
+console.log(myArray);
+
+//Iterate with For loop
+
+var ourArray = [];
+
+for (var i = 0; i < 5; i++) {
+    ourArray.push(i);
+}
+
+console.log(ourArray);
+
+//odd numbers with a for loop
+
+var oddArray = [];
+
+for (var i = 1; i < 10; i += 2){
+    oddArray.push(i);
+}
+
+console.log(oddArray);
+
+//count backwards with a for loop
+
+var negArray = [];
+
+for (var i = 10; i > 0; i -= 2) {
+    negArray.push(i);
+}
+
+console.log(negArray);
+
+var oddNegArray = [];
+
+for (var i = 9; i > 0; i -=2 ) {
+    oddNegArray.push(i);
+}
+
+console.log(oddNegArray);
+
+//iterate through an array with a for loop
+
+var ourArr = [2, 3, 4, 5, 6];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+    ourTotal += ourArr[i];
+}
+
+console.log(ourTotal);
+
+//nesting for loops
+
+function multiplyAll(arr) {
+    var product = 1;
+
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+
+    return product;
+}
+
+var product = multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+console.log(product);
+>>>>>>> 207acdc05a665bb9ec6cf7b6c4cfe8d5a77e6220
