@@ -692,11 +692,14 @@ delete ourDog.bark;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //object lookup
 function phoneticLookup(val) {
     var result = "";
 
 =======
+=======
+>>>>>>> 207acdc (more training)
 =======
 >>>>>>> 207acdc (more training)
 var myDog = {
@@ -716,7 +719,10 @@ function phoneticLookup(val){
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 207acdc05a665bb9ec6cf7b6c4cfe8d5a77e6220
+=======
+>>>>>>> 207acdc (more training)
 =======
 >>>>>>> 207acdc (more training)
     var lookup = {
@@ -725,6 +731,7 @@ function phoneticLookup(val){
         "charlie": "Chicago",
         "delta": "Denver",
         "echo": "Easy",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "forxtrot": "Frank",
@@ -737,6 +744,10 @@ function phoneticLookup(val){
         "foxtrot": "Frank",
     };
 >>>>>>> 207acdc (more training)
+=======
+        "foxtrot": "Frank",
+    };
+>>>>>>> 207acdc (more training)
 
     result = lookup[val];
 
@@ -745,8 +756,11 @@ function phoneticLookup(val){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log(phoneticLookup("charlie"));
 =======
+=======
+>>>>>>> 207acdc (more training)
 =======
 >>>>>>> 207acdc (more training)
 console.log(phoneticLookup("charlie"));
@@ -961,8 +975,12 @@ function multiplyAll(arr) {
 var product = multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log(product);
 >>>>>>> 207acdc05a665bb9ec6cf7b6c4cfe8d5a77e6220
+=======
+console.log(product);
+>>>>>>> 207acdc (more training)
 =======
 console.log(product);
 >>>>>>> 207acdc (more training)
