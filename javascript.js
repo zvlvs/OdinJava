@@ -690,18 +690,13 @@ var ourDog = {
 
 delete ourDog.bark;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //object lookup
 function phoneticLookup(val) {
     var result = "";
 
-=======
-=======
->>>>>>> 207acdc (more training)
-=======
->>>>>>> 207acdc (more training)
 var myDog = {
     "name": "Happy Coder",
     "legs": "4",
@@ -709,7 +704,7 @@ var myDog = {
     "friends": ["freedomCamp Campers"],
     "bark": "woof"
 };
-
+}
 delete myDog.tails;
 
 //object for lookup
@@ -718,51 +713,20 @@ function phoneticLookup(val){
     var result = "";
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 207acdc05a665bb9ec6cf7b6c4cfe8d5a77e6220
-=======
->>>>>>> 207acdc (more training)
-=======
->>>>>>> 207acdc (more training)
     var lookup = {
         "alpha": "Adams",
         "bravo": "Boston",
         "charlie": "Chicago",
         "delta": "Denver",
         "echo": "Easy",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         "forxtrot": "Frank",
     }
-=======
-        "foxtrot": "Frank",
-    };
->>>>>>> 207acdc05a665bb9ec6cf7b6c4cfe8d5a77e6220
-=======
-        "foxtrot": "Frank",
-    };
->>>>>>> 207acdc (more training)
-=======
-        "foxtrot": "Frank",
-    };
->>>>>>> 207acdc (more training)
-
     result = lookup[val];
 
     return result;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log(phoneticLookup("charlie"));
-=======
-=======
->>>>>>> 207acdc (more training)
-=======
->>>>>>> 207acdc (more training)
+
 console.log(phoneticLookup("charlie"));
 
 //testing objects for properties
@@ -974,13 +938,60 @@ function multiplyAll(arr) {
 
 var product = multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 console.log(product);
->>>>>>> 207acdc05a665bb9ec6cf7b6c4cfe8d5a77e6220
-=======
-console.log(product);
->>>>>>> 207acdc (more training)
-=======
-console.log(product);
->>>>>>> 207acdc (more training)
+
+
+//iterate with Do... While loops
+
+var myArray2 = [];
+var i = 10;
+
+do {
+    myArray2.push(i);
+    i++;
+} while (i < 10)
+
+console.log(i, myArray2);
+
+//profile lookup
+
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Voilin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Voss",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    },
+];
+
+function lookUpProfile(name, prop) {
+    for (var i = 0; i < contacts.length; i++) {
+        //first thing will be to check if the name is in the list
+        if (contacts[i].firstName === name) {
+            return contacts[i][prop] || "No Such Property";
+        }
+    }
+    return "No Such Contact"
+}
+
+var data = lookUpProfile("Sherlock", "lastName");
+
+console.log(data);
